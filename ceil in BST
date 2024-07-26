@@ -1,0 +1,18 @@
+int findCeil(BinaryTreeNode<int> *node, int x){
+int res=-1;
+while(node){
+    if(node->data==x){
+        return node->data;
+    }
+    else if(node->data<x){
+        node=node->right;
+    }
+    else{
+        res=node->data;
+        node=node->left;
+
+    }
+   
+}
+ return res;
+}
